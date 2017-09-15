@@ -1,2 +1,7 @@
-<h1>BankAccounts#edit</h1>
-<p>Find me in app/views/bank_accounts/edit.html.erb</p>
+%h1
+  Editing Bank Account: = @bank_account.institution
+%hr
+
+= render(partial: 'form')
+
+= link_to 'Back', bank_account_path(@bank_account)

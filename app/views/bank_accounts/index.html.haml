@@ -6,10 +6,13 @@
     - @bank_accounts.each do |bank_account|
       %li.bank-account
         %h3
-          Institution: = bank_account.institution
+          Institution:
+          = link_to bank_account.institution, bank_account_path(bank_account)
         %p
-          Description: = bank_account.description
+          Description:
+          = bank_account.description
         = link_to 'Delete', bank_account_path(bank_account), method: :delete
+        %hr
 - else
   %h3 No Bank Accounts, Please Create One!
 
