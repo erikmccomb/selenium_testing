@@ -4,5 +4,5 @@ module FeatureMacros
       @user = FactoryGirl.create(:user)
       login_as(@user, scope: :user)
     end
-  end
+  end 
 end
