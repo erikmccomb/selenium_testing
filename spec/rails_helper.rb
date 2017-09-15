@@ -9,7 +9,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'devise'
 require 'support/controller_macros'
-require 'suppor/feature_macros'
+require 'support/feature_macros'
 
 # Should Matchers Configuration
 Shoulda::Matchers.configure do |config|
@@ -42,7 +42,7 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   # Devise Feature Spec Configuration
   include Warden::Test::Helpers
-  include FeastureMacros
+  include FeatureMacros
 
   # Devise Controller Spec Configuration
   config.include Devise::Test::ControllerHelpers, :type => :controller

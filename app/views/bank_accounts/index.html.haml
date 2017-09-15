@@ -7,11 +7,11 @@
       %li.bank-account
         %h3
           Institution:
-          = link_to bank_account.institution, bank_account_path(bank_account)
+          = link_to bank_account.institution, bank_account_path(bank_account), class: 'show-account'
         %p
           Description:
           = bank_account.description
-        = link_to 'Delete', bank_account_path(bank_account), method: :delete
+        = link_to 'Delete', bank_account_path(bank_account), class: 'delete-account', method: :delete, data: { confirm: 'Really Delete?'}
         %hr
 - else
   %h3 No Bank Accounts, Please Create One!
